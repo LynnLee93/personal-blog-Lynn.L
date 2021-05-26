@@ -1,0 +1,27 @@
+<%- include("partials/header"); -%>
+
+
+<div class="post-top">
+  <h1><%=title%></h1>
+</div>
+<div>
+  <p><%=content%></p>
+</div>
+
+
+<form class="" action="/comment" method="post">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label comment-name">Your Name</label>
+    <input type="text" name="userName" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label comment-text">Comments</label>
+    <textarea class="form-control" name="userComment" id="exampleFormControlTextarea1" placeholder="Say something" rows="3"></textarea>
+  </div>
+  <div>
+    <button class="btn btn-secondary" type="submit" name="button">Publish</button>
+  </div>
+</form>
+
+
+<%- include("partials/footer"); -%>

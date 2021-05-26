@@ -1,0 +1,36 @@
+<%- include("partials/header"); -%>
+<h1>Home</h1>
+<p> <%= startingContent %> </p>
+
+
+<div class="container posts-header">
+  <h1 id="post-head">Posts</h1>
+</div>
+
+
+<%  posts.forEach(function(post){ %>
+
+<h2><%=post.title%></h2>
+
+
+<p class="home-post-content">
+  <%= post.content.substring(0, 100) + " ..." %>
+  <a style="color: #495464"  href="/posts/<%=post.id%>">Read More</a>
+</p>
+
+
+<% }) %>
+
+<!-- ---Page--- -->
+<nav aria-label="Page navigation example">
+  <ul class="pagination pagination-sm justify-content-center">
+    <li class="page-item"><a class="page-link link-secondary " href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link link-secondary" href="#">1</a></li>
+    <li class="page-item"><a class="page-link link-secondary" href="#">2</a></li>
+    <li class="page-item"><a class="page-link link-secondary" href="#">3</a></li>
+    <li class="page-item"><a class="page-link link-secondary" href="#">Next</a></li>
+  </ul>
+</nav>
+
+
+<%- include("partials/footer"); -%>
