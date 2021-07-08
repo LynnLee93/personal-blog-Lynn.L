@@ -1,12 +1,14 @@
 //jshint esversion:6
-
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const _ = require("lodash");
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://lynn062504:lynn062504@blog-01.bkub9.mongodb.net/blogDB", {
+const password = process.BLOG_DB_PW;
+
+mongoose.connect("mongodb+srv://lynn062504:password@blog-01.bkub9.mongodb.net/blogDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
